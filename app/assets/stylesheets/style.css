@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "pages-icon";
+  src: url("pages-icon.woff") format("woff"), url("pages-icon.ttf") format("truetype"), url("pages-icon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.jumbotron.profil-cover {
+  height: 500px !important;
+}
+
+.jumbotron.profil-cover img {
+  width: 1500px;
+  height: 500px;
+}
+
+.social .jumbotron .cover-photo {
+  background-color: rgb(37, 46, 55);
+}
+
+.social .jumbotron .cover-photo.cover-profil{
+  background-color: rgb(37, 46, 55);
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.social .jumbotron .center-catch {
+  position: absolute;
+  top: 25vh;
+  left: 45vh;
+}
+
+.social .jumbotron .profil-cover{
+  position: absolute;
+}
+
+
+.register-container {
+  padding-top: 125px;
+}
+
+.profil-cover .info-box {
+  left: 10%;
+  z-index: 5;
+}
+
+.info-box {
+    position: relative;
+    bottom: 120px;
+    z-index: 5;
+    left: 10%;
+}
+
+.info-box h1, .info-box h5 {
+  text-shadow:
+  1px 1px 0 #000,
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+.info-box img {
+  float: left;
+  border: 5px solid white;
+  margin-right: 10px;
+}
+
+.clearfix.menu-separator {
+  border: 1px solid rgb(146, 154, 172);
+}
+
+a.menu-link {
+  display: inline !important;
+}
+
+

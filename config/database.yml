@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  user: postgres
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: fighto_dev
+
+production: 
+  <<: *default
+  database: fighto_prod
+
+test:
+  <<: *default
+  database: fighto_test
+

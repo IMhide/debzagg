@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fighto</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body class="fixed-header">
+    <%= render 'layouts/sidebar'%>
+    <div class="page-container">
+      <%= render 'layouts/header' %>
+      <div class="page-content-wrapper ">
+        <%= yield %>
+      </div>
+      <%= render 'layouts/search_overlay' %>
+    </div>
+    <%= javascript_include_tag 'application', media: 'all' %>
+
+  </body>
+</html>

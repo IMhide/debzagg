@@ -1,0 +1,19 @@
+<div class="register-container full-height sm-p-t-30">
+  <div class="d-flex justify-content-center flex-column full-height">
+    <img src="<%= image_url('debzagg_tr_black.png')%>" alt="logo" data-src="<%= image_url('debzagg_tr_black.png')%>" data-src-retina="<%= image_url('debzagg_tr_black.png')%>" height=47 width=257> 
+    <h3>Mot de passe oublié ?</h3>
+    <p>Pas de soucis, rentre ton mail. On t'envoie un mail pour créer un nouveau mot de passe</p>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form-group-default">
+            <%= f.label :email %>
+            <%= f.email_field :email, autocomplete: "email", class:'form-control', required: true %>
+          </div>
+        </div>
+      </div>
+       <%= f.submit "Changer de mot de passe", class: 'btn btn-primary btn-cons m-t-10' %>
+    <% end %>
+  </div>
+</div>

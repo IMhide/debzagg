@@ -1,0 +1,33 @@
+<div class="register-container full-height sm-p-t-30">
+  <div class="d-flex justify-content-center flex-column full-height">
+    <img src="<%= image_url('debzagg_tr_black.png')%>" alt="logo" data-src="<%= image_url('debzagg_tr_black.png')%>" data-src-retina="<%= image_url('debzagg_tr_black.png')%>" height=47 width=257> 
+    <h3>Votre pas le plus important dans l'e-sport se trouve apres cette connection</h3>
+    <p>
+    Tu n'as pas de compte ? <%= link_to 'Connecte toi', user_registration_path, class: 'text-info' %> 
+    </p>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'p-t-15') do |f| %>
+     <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form-group-default">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'form-control', required: true %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form-group-default">
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', required: true %>
+          </div>
+        </div>
+      </div>
+      <div class="row m-t-10">
+        <div class="offset-lg-6 col-lg-6 text-right">
+          <%= link_to 'Mot de passe perdu ?', new_user_password_path, class: 'text-info small' %> 
+        </div>
+      </div>
+     <%= f.submit "Connexion", class: 'btn btn-primary btn-cons m-t-10' %>
+    <% end %>
+  </div>
+</div>

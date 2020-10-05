@@ -1,0 +1,27 @@
+<div class="register-container full-height sm-p-t-30">
+  <div class="d-flex justify-content-center flex-column full-height">
+    <img src="<%= image_url('debzagg_tr_black.png')%>" alt="logo" data-src="<%= image_url('debzagg_tr_black.png')%>" data-src-retina="<%= image_url('debzagg_tr_black.png')%>" height=47 width=257> 
+    <h3>Change ton password</h3>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <%= f.hidden_field :reset_password_token %>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form-group-default">
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', required: true %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form-group-default">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'form-control', require: true %>
+          </div>
+        </div>
+      </div>
+      <%= f.submit "Changer mon mot de passe", class: 'btn btn-primary btn-cons m-t-10' %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="register-container full-height sm-p-t-30">
+  <div class="d-flex justify-content-center flex-column full-height">
+    <h3>Change ton mot de passe</h3>
+    <%= form_for(@user, as: 'user', url: registration_path('user'), html: { method: :put }, class: 'p-t-15') do |f| %>
+      <%= render "devise/shared/error_messages", resource: @user %>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form-group-default">
+            <%= f.label :current_password %>
+            <%= f.password_field :current_password, autocomplete: "new-password", class: 'form-control', required: true %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form-group-default">
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', required: true %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form-group-default">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'form-control', require: true %>
+          </div>
+        </div>
+      </div>
+      <%= f.submit "Editer mon compte", class: 'btn btn-primary btn-cons m-t-10' %>
+      <button class="btn btn-default btn-cons m-t-10">
+        <%= link_to "Retour au profil", :back %>
+      </button>
+    <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,21 @@
+<div class="jumbotron profil-cover" data-social="cover" data-pages="parallax">
+  <div class=" container-fluid container-fixed-lg sm-p-l-0 sm-p-r-0 pl-0 pr-0">
+    <div class="inner">
+      <div class="profil-cover text-center m-b-40 sm-p-l-15">
+        <%= image_tag user.safe_cover_picture_url %>
+      </div>
+    </div>
+  </div>
+  <div class="cover-profil cover-photo" style="background-image: url('<%= user.safe_cover_picture_url %>')">
+  </div>
+</div>
+<div class="info-box">
+  <div>
+    <img alt="Avatar" width="155" height="155" data-src-retina="<%= user.safe_profil_picture_url %>" data-src="<%= user.safe_profil_picture_url %>" src="<%= user.safe_profil_picture_url %>" class="rounded-circle">
+    <div style=""> 
+      <h1 class="text-white no-margin"><%= user.full_nick %></h1>
+      <h5 class="text-light no-margin"><%= user.display_name %> </h5>
+      <h5 class="text-light mt-4"><span class="material-icons">place</span><%= user.full_location %> - <span class="material-icons">calendar_today</span> <%= I18n.l(user.created_at, format: :month_year).capitalize  %></h5>
+   </div>
+  </div>
+</div>

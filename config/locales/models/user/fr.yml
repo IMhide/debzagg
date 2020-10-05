@@ -1,0 +1,18 @@
+fr:
+  activerecord:
+    models:
+      user:
+        one: utilisateur(trice)
+        other: utilisateurs(trices)  
+        attributes:
+          email: E-Mail
+          password: Mot de passe
+          firstname: Prénom
+          lastname: Nom de famille
+          city: Ville
+          country: Pays
+          nickname: Pseudonyme
+          tab: Tag d'equipe
+          birthdate: Date de naissance
+
+
