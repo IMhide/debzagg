@@ -1,2 +1,55 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<div class="social-wrapper">
+  <div class="social " data-pages="social">
+    <div class=" container-fluid container-fixed-lg p-t-50 sm-p-l-0 sm-p-r-0">
+      <div class="row p-t-30"> 
+        <div class='col'>
+          <h1> Mes tournois en tant que participants</h1>
+        </div>
+        <div class='col'>
+          <div class='text-right align-middle m-t-30'>
+            <button class="btn btn-primary">Trouver un evenement</button>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col p-t-30'>
+          <div class="no-result">
+            <h1>Vous ne participez a aucun evenement</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row p-t-30"> 
+        <div class='col'>
+          <h1> Mes tournois en tant qu'organisateur</h1>
+        </div>
+        <div class='col'>
+          <div class='text-right align-middle m-t-30'>
+            <%= link_to new_event_path do %>
+              <button class="btn btn-primary">Organiser un evenement</button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col p-t-30'>
+          <% if @organized_events.nil? %>
+            <div class="no-result">
+              <h1>Vous n'organisez aucun evenements</h1>
+            </div>
+          <% else%>
+            <% @organized_events.each do |event| %>
+              <div class='col'>
+                <div class='card card-default'>
+                  <div class='card-body'>
+                    <h3><%= event.name %></h3>
+                    <p> <%= I18n.l(event.start_at, format: :long) %> </p>
+                  </div>
+                </div>
+              </div>
+            <%end%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

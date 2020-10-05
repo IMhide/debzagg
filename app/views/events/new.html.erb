@@ -1,2 +1,32 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<div class="register-container full-height sm-p-t-30">
+  <div class="d-flex justify-content-center flex-column full-height">
+    <h1>Creer un evenement</h1>
+    <p> Ici un conseil avisé</p>
+    <%= render "devise/shared/error_messages", resource: @event %>
+    <%= form_for @event do |f| %>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form-group-default">
+            <%= f.label :name %>
+            <%= f.text_field :name, class:'form-control', autofocus: true, required: true %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group form-group-default">
+            <%= f.label :start_at %>
+            <%= f.datetime_field :start_at, class:'form-control', required: true %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group form-group-default">
+            <%= f.label :end_at %>
+            <%= f.datetime_field :end_at, class:'form-control', required: true %>
+          </div>
+        </div>
+      </div>
+      <%= f.submit "Creer l'evenement", class: 'btn btn-primary btn-cons m-t-10' %>
+    <% end %>
+  </div>
+</div>

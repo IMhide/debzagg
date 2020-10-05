@@ -6,7 +6,9 @@
           <div class="center-catch text-center m-b-40 sm-p-l-15">
             <%= image_tag 'debzagg_trans.png' %>
             <h5 class="text-white no-margin">Participez, Organisez, Gagnez des tournois</h5>
-            <button class="btn btn-primary">Organisez un evenement</button>
+            <%= link_to new_event_path do %>
+              <button class="btn btn-primary">Organisez un evenement</button>
+            <% end %>
             <button class="btn btn-default">Trouver un evenement</button>
           </div>
         </div>

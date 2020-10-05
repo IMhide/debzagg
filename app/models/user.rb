@@ -13,4 +13,6 @@ class User < ApplicationRecord
   validates :lastname, presence: true
   validates :birthdate, presence: true
   validates :country, presence: true
+
+  has_many :organized_events, foreign_key: :user_id, class_name: 'Event', inverse_of: :organizer
 end

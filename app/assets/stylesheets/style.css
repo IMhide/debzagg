@@ -54,10 +54,10 @@
 }
 
 .info-box {
-    position: relative;
-    bottom: 120px;
-    z-index: 5;
-    left: 10%;
+  position: relative;
+  bottom: 120px;
+  z-index: 5;
+  left: 10%;
 }
 
 .info-box h1, .info-box h5 {
@@ -83,4 +83,13 @@ a.menu-link {
   display: inline !important;
 }
 
+.page-container{
+  padding: 0 !important;
+}
 
+.social .no-result {
+  text-align: center;
+  color: #afafaf;
+  border: 2px dashed #afafaf;
+  padding: 10px;
+}
